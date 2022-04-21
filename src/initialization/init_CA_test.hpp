@@ -1,5 +1,5 @@
-#ifndef LBM_MULTI_FILE_CONTACT_ANGLE_TEST_HPP
-#define LBM_MULTI_FILE_CONTACT_ANGLE_TEST_HPP
+#ifndef LBM_MULTI_FILE_INIT_CA_TEST_HPP
+#define LBM_MULTI_FILE_INIT_CA_TEST_HPP
 
 #include <iostream>
 
@@ -8,9 +8,9 @@
 #include "../../src/function.hpp"
 #include "../../src/option.hpp"
 
-void CA_Test() {
+void CaTestInit() {
     int i,j,k,m;
-    if (CA_test) {
+    if (CA_test_flag) {
 
         cout<< "Contact Angle Test start! "<<endl;
 
@@ -78,4 +78,4 @@ void CA_Test() {
     }
 }
 
-#endif //LBM_MULTI_FILE_CONTACT_ANGLE_TEST_HPP
+#endif //LBM_MULTI_FILE_INIT_CA_TEST_HPP

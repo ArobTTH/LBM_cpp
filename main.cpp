@@ -7,7 +7,7 @@ int main() {
 
     initialization();
 
-    for (int n = 0; n < Nloop; n++) {
+    for (int n = 0; n <= Nloop; n++) {
 
         population();
 

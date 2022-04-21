@@ -91,8 +91,8 @@ double forceeq(int k, const double force[2], const double U[2], double psi)
 
 double psi(double Rho, double Pressure)
 {
-    if ((Rho/3-Pressure)<0)
-		printf("warning: check psi!\n");
+//    if ((Rho/3-Pressure)<0)
+//		printf("warning: check psi!\n");
 
     double psi = sqrt(2*(Pressure-Rho/3)/G);
     return psi;

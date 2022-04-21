@@ -28,6 +28,10 @@ void macro () {
 
                 P[i][j] = peos( rho[i][j], T[i][j]);
                 Psi[i][j] = psi( rho[i][j],P[i][j]);
+                lambda[i][j] = 0.028 * rho[i][j];
+            } else{
+                lambda[i][j] = lambda_s;
+                rho[i][j] = rho_s;
             }
         }
     }

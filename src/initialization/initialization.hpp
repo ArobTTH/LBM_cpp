@@ -5,14 +5,18 @@
 #include "../../src/global_variable.hpp"
 #include "../../src/option.hpp"
 
-#include "contact_angle_test.hpp"
+#include "init_CA_test.hpp"
+#include "init_boiling_simple.hpp"
 
 void initialization() {
 
-    if(CA_test) {
-        CA_Test();
+    if(CA_test_flag) {
+        CaTestInit();
     }
 
+    if(boiling_simple_flag) {
+        boilingSimpleInit();
+    }
 
 
 }

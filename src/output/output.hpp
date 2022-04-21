@@ -10,7 +10,8 @@
 #include "../../src/parameter.hpp"
 #include "../../src/global_variable.hpp"
 #include "../../src/option.hpp"
-#include "output_contact_angle.hpp"
+#include "output_CA_test.hpp"
+#include "output_boiling_simple.hpp"
 
 using namespace std;
 
@@ -20,8 +21,12 @@ void output(int n) {
 
     ostringstream filename;
 
-    if (CA_test) {
+    if (CA_test_flag) {
         filename = CATest();
+    }
+
+    if (boiling_simple_flag) {
+        filename = boilingSimple(n);
     }
 
     string output_name = "../data/" + filename.str();
@@ -36,7 +41,7 @@ void output(int n) {
         {
 
             if (area[i][j] == 1) {
-                rho[i][j] = rhow[i][j];
+                rho[i][j] = rho_s;
             }
 
             out

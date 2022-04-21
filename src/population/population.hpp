@@ -4,17 +4,21 @@
 #include "../../src/parameter.hpp"
 #include "../../src/global_variable.hpp"
 #include "../../src/function.hpp"
+#include "../../src/option.hpp"
 #include "streaming.hpp"
 #include "boundary.hpp"
 #include "collision.hpp"
 #include "macro.hpp"
 #include "force.hpp"
+#include "energy.hpp"
 
 void population () {
 
     streaming();
 
     boundary();
+
+    Rk();
 
     macro();
 

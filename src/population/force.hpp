@@ -92,8 +92,6 @@ void force () {
                                 f_m[i][j][m]-=Psi[i][j]*G*w2[k]*
                                               psi(rhow[ip][jp], P[i][j])*e[k][m];
 
-                                /*f_ads[i][j][m]-=Psi[i][j]*Gw*ww[k]*
-                                    Psi[i][j]*e[k][m];*/
                             }
                         }
                     }
@@ -143,6 +141,27 @@ void force () {
     }
 
     // fb
+    double rho_sum = 0;
+    for(i=0; i<=NX; i++) {
+        for(j=0; j<=NY; j++) {
+            if(area[i][j]!=1)
+            {
+                rho_sum += rho[i][j];
+            }
+        }
+    }
+    rho_average = rho_sum/fluid_count;
+
+    for(i=0; i<=NX; i++)
+    {
+        for(j=0; j<=NY; j++)
+        {
+            if(area[i][j]!=1)
+            {
+                f_b[i][j][1] = (rho[i][j] - rho_average)* (-g);
+            }
+        }
+    }
 
     //total force
     for (i=0;i<=NX;i++)

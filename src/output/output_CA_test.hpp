@@ -1,11 +1,5 @@
-#ifndef LBM_MULTI_FILE_OUTPUT_CONTACT_ANGLE_HPP
-#define LBM_MULTI_FILE_OUTPUT_CONTACT_ANGLE_HPP
-
-#include <iostream>
-#include <cmath>
-#include <cstdio>
-#include <fstream>
-#include <sstream>
+#ifndef LBM_MULTI_FILE_OUTPUT_CA_TEST_HPP
+#define LBM_MULTI_FILE_OUTPUT_CA_TEST_HPP
 
 
 ostringstream CATest() {
@@ -37,4 +31,4 @@ ostringstream CATest() {
     return name;
 }
 
-#endif //LBM_MULTI_FILE_OUTPUT_CONTACT_ANGLE_HPP
+#endif //LBM_MULTI_FILE_OUTPUT_CA_TEST_HPP
