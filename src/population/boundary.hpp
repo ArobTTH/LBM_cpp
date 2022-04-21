@@ -15,7 +15,7 @@ void boundary () {
                     ip=i+e[k][0];
                     jp=j+e[k][1];
                     wrap(ip,jp);
-                    if (area[ip][jp]==1)// touch to solid node
+                    if (area[ip][jp]==1)// solid node
                         f[i][j][bb[k]]=F[i][j][k];
                 }
             }

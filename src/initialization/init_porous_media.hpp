@@ -1,39 +1,46 @@
-#ifndef LBM_MULTI_FILE_INIT_CA_TEST_HPP
-#define LBM_MULTI_FILE_INIT_CA_TEST_HPP
+#ifndef LBM_MULTI_FILE_INIT_POROUS_MEDIA_HPP
+#define LBM_MULTI_FILE_INIT_POROUS_MEDIA_HPP
 
+#include "../../src/help/qsgs.hpp"
 
-void caTestInit() {
+void porousMediaInit() {
     int i,j,k,m;
 
     RK_flag = false;
-    if (CA_test_flag) {
-
-        cout<< "Contact Angle Test start! "<<endl;
-
-        double RR = 40.0;
-        double R0 = int(NX / 2);
+        cout<< "Porous media start! "<<endl;
 
         //fluid & solid
-        for (i = 0; i <= NX; i++) {
-            for (j = 0; j <= NY; j++) {
-                //solid
-                if (j == 0 || j == NY) {
-                    area[i][j] = 1;
-                } else
-                    //fluid
-                {
-                    area[i][j] = 0;
-                }
+    quartetStructureGenerationSet();
+
+    for (i = 0; i<= NX; i++) {
+        for (j = 0; j <= NY; j++) {
+            if (j == 0 || j== NY) {
+                area[i][j] = 1;
             }
         }
+    }
+
+    fluid_count = 0;
+    for(i=0; i<=NX; i++)//buoyancy force
+    {
+        for(j=0; j<=NY; j++)
+        {
+            if(area[i][j]!=1)
+            {
+                fluid_count++;
+            }
+        }
+    }
+
         //init density
         for (i = 0; i <= NX; i++) {
             for (j = 0; j <= NY; j++) {
                 if (area[i][j] == 1) {
                     rho[i][j] = rho_s;
+                } else if (j <= NY/2) {
+                    rho[i][j] = rho_l;
                 } else {
-                    rho[i][j] = (rho_l + rho_v) * 0.5 - (rho_l - rho_v) * 0.5 *
-                                                        tanh((sqrt((i - R0) * (i - R0) + (j - 1) * (j - 1)) - RR) / 5);
+                    rho[i][j] = rho_v;
                 }
             }
         }
@@ -71,7 +78,8 @@ void caTestInit() {
                 }
             }
         }
-    }
 }
 
-#endif //LBM_MULTI_FILE_INIT_CA_TEST_HPP
+
+
+#endif //LBM_MULTI_FILE_INIT_POROUS_MEDIA_HPP

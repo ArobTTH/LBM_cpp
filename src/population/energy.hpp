@@ -85,8 +85,7 @@ void Kt(double T_old[][NY+1],double T_new[][NY+1]) {
                                 * T_old[i][j] * PR_R/cv/(1 - PR_b*rho[i][j]);
 
                 if(j==0) {
-                    if((i>= 0.5*( NX+1 - heating_section ))&&(i< 0.5*( NX+1 + heating_section)))
-                    {
+                    if((i>= 0.5*( NX+1 - heating_section ))&&(i< 0.5*( NX+1 + heating_section))) {
                         T_new[i][j] =  ((lambda[i][j]+lambda[i2][j])/2.0*(T_old[i2][j] - T_old[i][j])
                                         - (lambda[i][j]+lambda[i1][j])/2.0*(T_old[i][j] - T_old[i1][j])
                                         + (lambda[i][j]+lambda[i][j2])/2.0*(T_old[i][j2] - T_old[i][j])

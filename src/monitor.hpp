@@ -2,6 +2,7 @@
 #define LBM_MULTI_FILE_MONITOR_HPP
 
 #include <iostream>
+#include <iomanip>
 
 #include "option.hpp"
 #include "global_variable.hpp"
@@ -10,7 +11,6 @@ using namespace std;
 #include "parameter.hpp"
 
 void monitor (int n) {
-
     //system("cls");
 
     if (CA_test_flag) {
@@ -20,9 +20,15 @@ void monitor (int n) {
                 << " %" << endl;
     }
 
-    if (boiling_simple_flag) {
+    if (boiling_simple_flag || porous_media_flag) {
         cout
-            << "computation: "<< n << "\t"
+            << "computation:   ";
+        cout
+            << setiosflags(ios::left)
+            << setw(9)
+            << n;
+        cout
+            << setprecision(18)
             << "average density: "<< rho_average <<"\t"
             << endl;
     }

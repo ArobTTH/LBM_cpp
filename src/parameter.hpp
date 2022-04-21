@@ -2,21 +2,21 @@
 #define LBM_MULTI_FILE_PARAMETER_HPP
 //D2Q9
 constexpr unsigned int    Q                      =  9;
+
 // grid
-constexpr unsigned int    NX                     =  400;
-constexpr unsigned int    NY                     =  200;
-
-
+constexpr unsigned int    NX                     =  800;
+constexpr unsigned int    NY                     =  400;
 constexpr unsigned int    thick_up               =  20;
 constexpr unsigned int    thick_down             =  20;
-
 constexpr unsigned int    heating_section        =  100;
 constexpr double          charging_ratio         =  0.5;
+
+//heat flux
 constexpr double          q                      =  (-1.86*0.0001*25);
 
 // output
-constexpr unsigned int    Nloop       =  20000;
-constexpr unsigned int    Noutput     =  2000;
+constexpr unsigned int    Nloop       =  200000;
+constexpr unsigned int    Noutput     =  20000;
 constexpr unsigned int    Nmonitor    =  100;
 
 // MRT
@@ -36,7 +36,7 @@ constexpr double    G           =  (-1.0);
 constexpr double    Gw          =  0.3;
 constexpr double    sigma       =  0.11;
 constexpr double    phi         =  1.1;
-constexpr double    delta_rho   =  0.3;
+constexpr double    delta_rho   =  0.8;
 
 // PR
 constexpr double    PR_omega    =  0.344;

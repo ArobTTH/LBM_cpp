@@ -62,4 +62,7 @@ int base_up_count = 0;
 int base_down_count = 0;
 double rho_average = 0;
 
+
+
+
 #endif //LBM_MULTI_FILE_GLOBAL_VARIABLE_HPP

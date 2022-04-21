@@ -6,12 +6,9 @@ void streaming () {
 
     int i,j,k,ip,jp;
 
-    for (i=0;i<=NX;i++)
-    {
-        for (j=0;j<=NY;j++)
-        {
-            for (k=0;k<Q;k++)
-            {
+    for (i=0;i<=NX;i++) {
+        for (j=0;j<=NY;j++) {
+            for (k=0;k<Q;k++) {
                 ip=i-e[k][0];
                 jp=j-e[k][1];
                 wrap(ip,jp);
@@ -20,7 +17,6 @@ void streaming () {
             }
         }
     }
-
 }
 
 #endif //LBM_MULTI_FILE_STREAMING_HPP

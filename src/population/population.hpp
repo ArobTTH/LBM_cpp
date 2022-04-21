@@ -14,17 +14,35 @@
 
 void population () {
 
-    streaming();
-
-    boundary();
-
-    Rk();
+//    streaming();
+//
+//    boundary();
+//
+//    if (RK_flag) {
+//        Rk();
+//    }
+//
+//    macro();
+//
+//    force();
+//
+//    collision();
 
     macro();
 
     force();
 
     collision();
+
+    streaming();
+
+    boundary();
+
+    if (RK_flag) {
+        Rk();
+    }
+
+
 
 }
 

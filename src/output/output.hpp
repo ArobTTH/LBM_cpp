@@ -12,6 +12,7 @@
 #include "../../src/option.hpp"
 #include "output_CA_test.hpp"
 #include "output_boiling_simple.hpp"
+#include "output_porous_media.hpp"
 
 using namespace std;
 
@@ -23,11 +24,12 @@ void output(int n) {
 
     if (CA_test_flag) {
         filename = CATest();
-    }
-
-    if (boiling_simple_flag) {
+    } else if (boiling_simple_flag) {
         filename = boilingSimple(n);
-    }
+    } else if (porous_media_flag) {
+        filename = porousMedia(n);
+    } else cout<<"out put error!"<<endl;
+
 
     string output_name = "../data/" + filename.str();
     ofstream out (output_name);
