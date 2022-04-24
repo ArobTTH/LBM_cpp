@@ -63,6 +63,7 @@ double h4[NX+1][NY+1];
 double lambda[NX+1][NY+1];
 
 double cc[NX+1][NY+1];
+double cc_flag[NX+1][NY+1];
 int fluid_count = 0;
 int base_up_count = 0;
 int base_down_count = 0;

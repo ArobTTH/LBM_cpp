@@ -11,7 +11,7 @@ MATH(EXPR stack_size "128*1024*1024")
 set(CMAKE_EXE_LINKER_FLAGS "-Wl,--stack,${stack_size}")
 
 add_executable(lbm_multi_file
-        main.cu src/help/cuda_help.hpp src/help/timer.hpp src/help/help.hpp src/help/params.hpp src/initialization/get_corner.hpp)
+        main.cu src/help/cuda_help.hpp src/help/timer.hpp src/help/help.hpp src/help/params.hpp src/initialization/get_corner.hpp src/help/random_num.hpp)
 
 set_target_properties(lbm_multi_file PROPERTIES
         CUDA_SEPARABLE_COMPILATION ON)

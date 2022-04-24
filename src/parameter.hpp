@@ -4,12 +4,12 @@
 constexpr unsigned int    Q                      =  9;
 
 // grid
-constexpr unsigned int    NX                     =  200;
-constexpr unsigned int    NY                     =  100;
+constexpr unsigned int    NX                     =  800;
+constexpr unsigned int    NY                     =  400;
 constexpr unsigned int    thick_up               =  20;
 constexpr unsigned int    thick_down             =  20;
 constexpr unsigned int    heating_section        =  100;
-constexpr double          charging_ratio         =  0.2;
+constexpr double          charging_ratio         =  0.5;
 
 //heat flux
 constexpr double          q                      =  (-1.86*0.0001*25);
@@ -33,7 +33,7 @@ constexpr double    tau_t       =  (1.0/1.1);
 
 // SC model
 constexpr double    G           =  (-1.0);
-constexpr double    Gw          =  0.3;
+constexpr double    Gw          =  0.4;
 constexpr double    sigma       =  0.11;
 constexpr double    phi         =  1.5;
 constexpr double    delta_rho   =  0.8;

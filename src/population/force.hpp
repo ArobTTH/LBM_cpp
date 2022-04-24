@@ -24,6 +24,7 @@ void force () {
         for (i = 0; i <= NX; i++) {
             for (j = 0; j <= NY; j++) {
                 cc[i][j] = 0;
+                cc_flag[i][j] = 0;
                 rho_ave[i][j] = 0;
                 for (k = 1; k < Q; k++) {
                     // solid node
@@ -35,6 +36,7 @@ void force () {
                         // touch fluid node
                         if (area[ip][jp] != 1){
                             cc[i][j] += w2[k];
+                            cc_flag[i][j] =1;
                             rho_ave[i][j] += w2[k] * rho[ip][jp];
                         }
                     }
@@ -45,7 +47,7 @@ void force () {
             for (j = 0; j <= NY; j++) {
                 rhow[i][j] = 0;
                 // solid node
-                if (area[i][j] == 1) {
+                if (area[i][j] == 1 && cc_flag[i][j] == 1) {
                     rho_ave[i][j] = rho_ave[i][j] / cc[i][j];
 
                     if (wet_flag) {

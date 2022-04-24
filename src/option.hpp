@@ -16,7 +16,7 @@ bool    RK_flag                 = false;
 bool    F_b_flag                = false;
 
 // wettability model setting
-bool    virtual_density_flag    = true;
+bool    virtual_density_flag    = false;
 bool    wet_flag                = true;
 
 

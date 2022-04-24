@@ -7,8 +7,9 @@
 #include "../../src/parameter.hpp"
 #include "../../src/global_variable.hpp"
 #include "../../src/option.hpp"
+#include "random_num.hpp"
 
-#define     cdd             0.005
+#define     cdd             0.04
 #define     targetPorosity  0.8
 #define     totalPoint      ((NX+1)*(NY+1))
 #define     d1              0.025
@@ -25,12 +26,6 @@ int solidCoo_y[totalPoint];
 
 using namespace std;
 
-double randNumGen()
-{
-    mt19937 rng(random_device{}());
-    uniform_real_distribution<double> result(0.0, 1.0);
-    return result(rng);
-}
 
 void quartetStructureGenerationSet() {
     int i,j,node;

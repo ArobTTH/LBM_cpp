@@ -9,7 +9,7 @@ void porousMediaInit() {
 
     cout << "Porous media boiling start! " << endl;
 
-    //fluid & solid
+    //fluid & solid/
     quartetStructureGenerationSet();
 
     for (i = 0; i <= NX; i++) {
@@ -74,23 +74,23 @@ void porousMediaInit() {
 
 
 
-//    for (i = 0; i <= NX; i++) {
-//        for (j = 0; j <= NY; j++) {
-//            if (j <  2*thick_down || j > NY -  2*thick_down) {
-//                area[i][j] = 1;
-//            }
-//        }
-//    }
-//
-//    for (i = 0; i <= NX; i++) {
-//        for (j = 0; j <= NY; j++) {
-//            if (i > 2 * thick_down && i < NX - 2 * thick_up) {
-//                if (j > 4 * thick_down && j < NY - 4 * thick_down) {
-//                    area[i][j] = 0;
-//                }
-//            }
-//        }
-//    }
+    for (i = 0; i <= NX; i++) {
+        for (j = 0; j <= NY; j++) {
+            if (j <  2*thick_down || j > NY -  2*thick_down) {
+                area[i][j] = 1;
+            }
+        }
+    }
+
+    for (i = 0; i <= NX; i++) {
+        for (j = 0; j <= NY; j++) {
+            if ((i > 0 && i <180 )|| (i >220 && i< 580)|| (i>620 && i<NX)) {
+                if (j > 4 * thick_down && j < NY - 4 * thick_down) {
+                    area[i][j] = 0;
+                }
+            }
+        }
+    }
 
 
 //  fluid & solid count

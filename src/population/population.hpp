@@ -14,19 +14,13 @@
 
 void population () {
 
-//    streaming();
-//
-//    boundary();
-//
+    streaming();
+
+    boundary();
+
 //    if (RK_flag) {
 //        Rk();
 //    }
-//
-//    macro();
-//
-//    force();
-//
-//    collision();
 
     macro();
 
@@ -34,13 +28,19 @@ void population () {
 
     collision();
 
-    streaming();
-
-    boundary();
+//    macro();
 //
-//    if (RK_flag) {
-//        Rk();
-//    }
+//    force();
+//
+//    collision();
+//
+//    streaming();
+//
+//    boundary();
+//
+////    if (RK_flag) {
+////        Rk();
+////    }
 
 
 
