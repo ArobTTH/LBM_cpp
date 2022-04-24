@@ -7,6 +7,7 @@
 #include "../../src/global_variable.hpp"
 #include "../../src/option.hpp"
 
+#include "get_corner.hpp"
 #include "init_CA_test.hpp"
 #include "init_boiling_simple.hpp"
 #include "init_porous_media.hpp"
@@ -24,6 +25,8 @@ void initialization() {
     if(porous_media_flag) {
         porousMediaInit();
     }
+
+    getCorner();
 
 
 }

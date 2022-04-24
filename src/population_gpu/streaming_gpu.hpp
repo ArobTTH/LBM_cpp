@@ -1,0 +1,8 @@
+#ifndef LBM_MULTI_FILE_STREAMING_GPU_HPP
+#define LBM_MULTI_FILE_STREAMING_GPU_HPP
+
+ void streamingGPU() {
+
+}
+
+#endif //LBM_MULTI_FILE_STREAMING_GPU_HPP

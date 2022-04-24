@@ -1,0 +1,8 @@
+#ifndef LBM_MULTI_FILE_FORCE_GPU_HPP
+#define LBM_MULTI_FILE_FORCE_GPU_HPP
+
+void forceGPU() {
+
+}
+
+#endif //LBM_MULTI_FILE_FORCE_GPU_HPP

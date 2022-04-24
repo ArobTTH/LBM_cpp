@@ -4,19 +4,19 @@
 constexpr unsigned int    Q                      =  9;
 
 // grid
-constexpr unsigned int    NX                     =  800;
-constexpr unsigned int    NY                     =  400;
+constexpr unsigned int    NX                     =  200;
+constexpr unsigned int    NY                     =  100;
 constexpr unsigned int    thick_up               =  20;
 constexpr unsigned int    thick_down             =  20;
 constexpr unsigned int    heating_section        =  100;
-constexpr double          charging_ratio         =  0.5;
+constexpr double          charging_ratio         =  0.2;
 
 //heat flux
 constexpr double          q                      =  (-1.86*0.0001*25);
 
 // output
 constexpr unsigned int    Nloop       =  200000;
-constexpr unsigned int    Noutput     =  20000;
+constexpr unsigned int    Noutput     =  1000;
 constexpr unsigned int    Nmonitor    =  100;
 
 // MRT
@@ -35,7 +35,7 @@ constexpr double    tau_t       =  (1.0/1.1);
 constexpr double    G           =  (-1.0);
 constexpr double    Gw          =  0.3;
 constexpr double    sigma       =  0.11;
-constexpr double    phi         =  1.1;
+constexpr double    phi         =  1.5;
 constexpr double    delta_rho   =  0.8;
 
 // PR
@@ -53,7 +53,7 @@ constexpr double    T_u         =  (0.85*Tc);
 
 // Physical parameters
 constexpr double    cv          =  6.0;
-constexpr double    lambda_s    =  (rho_l*0.028*50);
+constexpr double    lambda_s    =  (rho_l*0.028*1);
 constexpr double    h_fg        =  (0.5702);
 constexpr double    g           =  (3*0.00001);
 

@@ -42,9 +42,9 @@ void output(int n) {
         for(j=0; j<=NY; j++)
         {
 
-            if (area[i][j] == 1) {
-                rho[i][j] = rho_s;
-            }
+//            if (area[i][j] == 1) {
+//                rho[i][j] = rhow[i][j];
+//            }
 
             out
                     << i << "\t"

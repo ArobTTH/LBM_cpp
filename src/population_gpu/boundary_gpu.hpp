@@ -1,0 +1,8 @@
+#ifndef LBM_MULTI_FILE_BOUNDARY_GPU_HPP
+#define LBM_MULTI_FILE_BOUNDARY_GPU_HPP
+
+void boundaryGPU() {
+
+}
+
+#endif //LBM_MULTI_FILE_BOUNDARY_GPU_HPP

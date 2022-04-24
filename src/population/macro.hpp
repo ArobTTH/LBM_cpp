@@ -41,8 +41,8 @@ void macro () {
             }
         }
     }
-    rho_average = rho_sum / fluid_count;
-    //rho_average = rho_sum;
+    //rho_average = rho_sum / fluid_count;
+    rho_average = rho_sum;
 
 }
 

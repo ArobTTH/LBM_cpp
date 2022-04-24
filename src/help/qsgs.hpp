@@ -8,17 +8,17 @@
 #include "../../src/global_variable.hpp"
 #include "../../src/option.hpp"
 
-#define     cdd             0.0001
-#define     targetPorosity  0.7
+#define     cdd             0.005
+#define     targetPorosity  0.8
 #define     totalPoint      ((NX+1)*(NY+1))
 #define     d1              0.025
 #define     d2              0.025
 #define     d3              0.025
 #define     d4              0.025
-#define     d5              0.025
-#define     d6              0.025
-#define     d7              0.025
-#define     d8              0.025
+#define     d5              0.0025
+#define     d6              0.0025
+#define     d7              0.0025
+#define     d8              0.0025
 
 int solidCoo_x[totalPoint];
 int solidCoo_y[totalPoint];

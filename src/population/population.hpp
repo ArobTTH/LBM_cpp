@@ -37,10 +37,10 @@ void population () {
     streaming();
 
     boundary();
-
-    if (RK_flag) {
-        Rk();
-    }
+//
+//    if (RK_flag) {
+//        Rk();
+//    }
 
 
 
